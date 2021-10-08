@@ -1,8 +1,9 @@
 {% extends 'base.html' %}
+{% block title %}| {{listing.title}}{% endblock %}
 {% block content %}
 {% load humanize %}
 {% load static %}
-{% block title %}| {{listing.title}}{% endblock %}
+
 <!--Alerts-->
 {% include 'partials/_alerts.html' %}
 
