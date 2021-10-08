@@ -1,9 +1,11 @@
+from os import name
 from django.urls import path
-from django.urls.conf import include
-from .import views
+from . import views
 
 urlpatterns = [
     path('', views.index, name='listings'),
     path('<int:listing_id>', views.listing, name='listing'),
-    path('search', views.search, name='search')
+    path('search', views.search, name='search'),
+    path('getform', views.getform, name='getform'),
+    path('postform', views.postform, name='postform'),
 ]
