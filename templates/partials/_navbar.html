@@ -36,6 +36,16 @@
            {% endif %}
           >
             <a class="nav-link" href="{% url 'listings' %}">Featured Listings</a>
+          </li>
+          <li 
+           {% if 'testimo' in request.path %}
+            class="nav-item active mr-3"
+           {% else %}
+            class="nav-item mr-3"
+           {% endif %}
+          >
+            <a class="nav-link" href="{% url 'testimo' %}">Testimonials</a>
+          </li>
         </ul>
 
         <ul class="navbar-nav ml-auto">
@@ -52,16 +62,16 @@
                   Admin Area</a>
               </li>
             {% endif %}
-              <li 
-              {% if 'dashboard' in request.path %}
-                class="nav-item active mr-3"
-              {% else %}
-                class="nav-item mr-3"
-              {% endif %}
-              >
-                <a class="nav-link" href="{% url 'dashboard' %}">
-                  Welcome {{user.username}} (Dashboard)</a>
-              </li>
+            <li 
+            {% if 'dashboard' in request.path %}
+              class="nav-item active mr-3"
+            {% else %}
+              class="nav-item mr-3"
+            {% endif %}
+            >
+              <a class="nav-link" href="{% url 'dashboard' %}">
+                Welcome {{user.username}} (Dashboard)</a>
+            </li>
               <li class="nav-item mr-3">
                 <a href="javascript:{document.getElementById('logout').submit()}" class="nav-link">
                   <i class="fas fa-sign-out-alt"></i>Logout
