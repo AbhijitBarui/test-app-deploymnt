@@ -25,6 +25,7 @@ INSTALLED_APPS = [
     'test_app.apps.TestAppConfig',
     'listings.apps.ListingsConfig',
     'realtors.apps.RealtorsConfig',
+    'django.contrib.humanize',
 ]
 
 MIDDLEWARE = [
