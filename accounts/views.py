@@ -5,7 +5,7 @@ from contacts.models import Contact
 
 def register(request):
     if request.method == "POST":
-        #register suer logic
+        #register user logic
         first_name = request.POST['first_name']
         last_name = request.POST['last_name']
         username = request.POST['username']
